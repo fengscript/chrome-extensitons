@@ -6,7 +6,6 @@ function check() {
 
   if (content && content.childElementCount > 0) {
     content.innerHTML = '<a href=' + sorece + '>Download</a>';
-    window.clearInterval(timer);
   }
 }
 
