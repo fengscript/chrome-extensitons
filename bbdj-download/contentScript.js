@@ -3,5 +3,12 @@ function loadJs(url) {
   script.src = chrome.runtime.getURL(url);
   document.body.appendChild(script);
 }
+// Method 1
+// loadJs('insert.js')
 
-loadJs('insert.js')
+// Method 2
+const resource = document.getElementById('jp_audio_0').getAttribute('src');
+
+document.querySelector('.playcz .dl').removeAttribute('onclick');
+
+document.querySelector('.playcz .dl').setAttribute('href', resource)
